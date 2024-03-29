@@ -1,15 +1,16 @@
 ---
+import Caroussel from '../components/Caroussel.tsx';
 import Destinations from '../components/Destinations.astro';
 import Hero from '../components/Hero.astro';
 import Search from '../components/Search.astro';
+import Selects from '../components/Selects.astro';
 import Layout from '../layouts/Layout.astro';
-
 ---
 
-<Layout title="Welcome to Astro.">
-	<Hero />
-	<Destinations/>
-	<Search/>
+<Layout title='Welcome to Astro.'>
+  <Hero />
+  <Destinations />
+  <Search />
+  <Selects />
+  <Caroussel client:only='react' />
 </Layout>
-
-

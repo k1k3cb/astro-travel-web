@@ -1,0 +1,18 @@
+---
+interface Props {
+  bg: ImageMetadata;
+  text: string;
+}
+
+const { bg, text } =Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<div class='relative'>
+  <Image class='w-full h-full object-cover' src={bg} alt='/' />
+  <div class='bg-gray-900/30 absolute top-0 left-0 w-full h-full'>
+    <p class='left-4 bottom-4 text-2xl font-bold text-white absolute'>
+      {text}
+    </p>
+  </div>
+</div>
